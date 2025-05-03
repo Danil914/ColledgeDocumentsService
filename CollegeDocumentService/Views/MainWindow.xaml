@@ -1,0 +1,42 @@
+﻿<Window x:Class="CollegeDocumentService.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CollegeDocumentService"
+        mc:Ignorable="d" Height="450" Width="400" ResizeMode="NoResize">
+
+    <Grid Background="#931c1f">
+        <StackPanel Grid.Column="1" 
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <Image Source="/Resources/Images/icon.png"
+                   Width="100"/>
+            <Label Content="Добро пожаловать!" Foreground="Black"
+                   FontSize="24" FontWeight="Black"/>
+
+            <Separator Visibility="Hidden"/>
+
+            <TextBlock Text="Логин" FontSize="16" 
+                       FontWeight="Bold" Foreground="Black"/>
+            <Separator Visibility="Hidden"/>
+            <TextBox Height="25"/>
+
+            <TextBlock Text="Пароль" FontSize="16" 
+                       FontWeight="Bold" Foreground="Black"/>
+            <Separator Visibility="Hidden"/>
+            <TextBox Height="25"/>
+
+            <Separator Visibility="Hidden" Height="15"/>
+
+            <Button Content="Войти" Foreground="Black" Background="White" 
+                    FontWeight="Bold" FontSize="16" Width="120" Height="25"
+                    BorderBrush="Transparent" Click="GoToDocumentWindow"/>
+
+            <Button Content="Регистрация" Foreground="Black" Background="Transparent"
+                    FontWeight="Bold" FontSize="16" Width="120" Height="25"
+                    BorderBrush="Transparent"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
