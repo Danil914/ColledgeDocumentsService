@@ -14,12 +14,9 @@ using System.Windows.Shapes;
 
 namespace CollegeDocumentService.Views
 {
-    /// <summary>
-    /// Логика взаимодействия для DocumentWindow.xaml
-    /// </summary>
-    public partial class DocumentWindow : Window
+    public partial class MainWindow : Window
     {
-        public DocumentWindow()
+        public MainWindow()
         {
             InitializeComponent();
         }

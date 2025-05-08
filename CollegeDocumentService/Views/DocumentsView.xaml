@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="CollegeDocumentService.Views.DocumentsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CollegeDocumentService.Views"
+        mc:Ignorable="d" d:Height="450" d:Width="800">
+    
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Background="#931c1f" 
+                    Orientation="Horizontal">
+            <Image Source="/Resources/Images/icon2.png"
+                   Width="70" Margin="10 0 0 0"/>
+            <Separator Visibility="Hidden" Width="10"/>
+            <Label Content="Документы" Foreground="White"
+                   FontSize="24" FontWeight="Black" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <Button Width="35" Height="35"  Margin="0 0 10 0" 
+                Background="Transparent" BorderBrush="Transparent" 
+                HorizontalAlignment="Right">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Resources/Images/feedback.png" Width="30" Height="30"/>
+            </StackPanel>
+        </Button>
+
+
+        <ListView x:Name="DocumentLV" Grid.Row="1"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch"
+                  HorizontalContentAlignment="Stretch">
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Создать заявку" Command="{Binding CreateItem}"/>
+                    <MenuItem Header="Изменить заявку" Command="{Binding EditItem}"/>
+                    <MenuItem Header="Закрыть заявку" Command="{Binding DoneItem}"/>
+                </ContextMenu>
+            </ListView.ContextMenu>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Фамилия" Width="auto" DisplayMemberBinding="{Binding Path=Surname}"/>
+                    <GridViewColumn Header="Имя" Width="auto" DisplayMemberBinding="{Binding Path=Name}"/>
+                    <GridViewColumn Header="Группа" Width="auto" DisplayMemberBinding="{Binding Path=Group}"/>
+                    <GridViewColumn Header="Документ" Width="auto" DisplayMemberBinding="{Binding Path=Document}"/>
+                    <GridViewColumn Header="Комментарий" Width="auto" DisplayMemberBinding="{Binding Path=Commentary}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</UserControl>

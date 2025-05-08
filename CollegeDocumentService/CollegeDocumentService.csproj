@@ -11,7 +11,9 @@
   <ItemGroup>
     <None Remove="AppData.xml" />
     <None Remove="appsettings.json" />
+    <None Remove="Resources\Images\feedback.png" />
     <None Remove="Resources\Images\icon.png" />
+    <None Remove="Resources\Images\icon2.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,12 +26,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
     <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.4" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.4" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.4" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.4" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,7 +39,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\Images\icon.png" />
+    <Resource Include="Resources\Images\feedback.png" />
+    <Resource Include="Resources\Images\icon2.png" />
   </ItemGroup>
 
 </Project>

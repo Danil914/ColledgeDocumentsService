@@ -1,0 +1,88 @@
+﻿<Window x:Class="CollegeDocumentService.Views.SendFeedbackView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CollegeDocumentService.Views"
+        mc:Ignorable="d" Height="450" Width="800" WindowState="Maximized">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Background="#931c1f" 
+                    Orientation="Horizontal">
+            <Image Source="/Resources/Images/icon2.png"
+                   Width="70" Margin="10 0 0 0"/>
+            <Separator Visibility="Hidden" Width="10"/>
+            <Label Content="Обратная связь" Foreground="White"
+                   FontSize="24" FontWeight="Black" VerticalAlignment="Center"/>
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Row="1" Width="230"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+
+            <TextBlock Text="Введите ваше ФИО" 
+                       FontSize="18" 
+                       FontWeight="Bold" 
+                       Foreground="Black"
+                       HorizontalAlignment="Center"/>
+            <Separator Visibility="Hidden"/>
+            <TextBox x:Name="FeedbackNameTB">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <Separator Visibility="Hidden"/>
+   
+            <TextBlock Text="Введите номер кабинета" 
+                       FontSize="18" 
+                       FontWeight="Bold" 
+                       Foreground="Black"
+                       HorizontalAlignment="Center"/>
+            <Separator Visibility="Hidden"/>
+            <TextBox x:Name="FeedbackCabinetTB">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <Separator Visibility="Hidden"/>
+
+            <TextBlock Text="Введите текст сообщения" 
+                       FontSize="18" 
+                       FontWeight="Bold" 
+                       Foreground="Black"
+                       HorizontalAlignment="Center"/>
+            <Separator Visibility="Hidden"/>
+            <TextBox x:Name="FeedbackMessageTB" Height="80">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <Separator Visibility="Hidden" Height="10"/>
+
+            
+            <Button Content="Отправить" Foreground="White" Background="#931c1f" 
+                    FontWeight="Bold" FontSize="16" Width="120" Height="25"
+                    BorderBrush="Transparent">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+        </StackPanel>
+    </Grid>
+</Window>
